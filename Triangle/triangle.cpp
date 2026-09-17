@@ -4,7 +4,7 @@ Triangle::Triangle(double side, double height) {
 	sHeight(height);
 }
 
-double Triangle::findArea() {
+double Triangle::findArea() const noexcept{
 	return (_side * _height) / 2.0;
 }
 
