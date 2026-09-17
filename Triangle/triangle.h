@@ -7,8 +7,12 @@ public:
 	Triangle(double side, double height);
 	double findArea();
 
-	double gSide() const noexcept;
-	double gHeight() const noexcept;
+	inline double gSide() const noexcept {
+		return _side;
+	}
+	inline double gHeight() const noexcept {
+		return _height;
+	}
 
 	void sSide(double side);
 	void sHeight(double height);

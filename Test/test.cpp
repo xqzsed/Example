@@ -4,15 +4,15 @@
 TEST(TriangleTest, ConstructorAndGetters) {
     Triangle t(5.0, 3.0);
 
-    EXPECT_EQ(t.gSide(), 5.0);
-    EXPECT_EQ(t.gHeight(), 3.0);
+    EXPECT_DOUBLE_EQ(t.gSide(), 5.0);
+    EXPECT_DOUBLE_EQ(t.gHeight(), 3.0);
 }
 
 TEST(TriangleTest, CalculateArea) {
     Triangle t(5.0, 3.0);
 
     double area = t.findArea();
-    EXPECT_EQ(area, 7.5); 
+    EXPECT_DOUBLE_EQ(area, 7.5); 
 }
 
 TEST(TriangleTest, SettersAndGetters) {
@@ -36,6 +36,12 @@ TEST(TriangleTest, NegativeSideThrowsException) {
 TEST(TriangleTest, TinyHeight) {
     Triangle t(5.0, 0.001);
     EXPECT_DOUBLE_EQ(t.gHeight(), 0.001);
+    EXPECT_DOUBLE_EQ(t.findArea(), 0.0025);
+}
+
+TEST(TriangleTest, TinySide) {
+    Triangle t(0.001, 5.0);
+    EXPECT_DOUBLE_EQ(t.gSide(), 0.001);
     EXPECT_DOUBLE_EQ(t.findArea(), 0.0025);
 }
 
