@@ -5,8 +5,9 @@ class Triangle {
 	double _side, _height;
 public:
 	Triangle(double side, double height);
-	double findArea() const noexcept;
-
+	inline double findArea() const noexcept {
+		return (_side * _height) / 2.0;
+	}
 	inline double gSide() const noexcept {
 		return _side;
 	}
