@@ -4,14 +4,14 @@ Triangle::Triangle(double side, double height) {
 	sHeight(height);
 }
 
-double Triangle::gSide() const {
+double Triangle::gSide() const noexcept {
 	return _side;
 }
-double Triangle::gHeight() const {
+double Triangle::gHeight() const noexcept{
 	return _height;
 }
 
-double Triangle::Area() {
+double Triangle::findArea() {
 	return (_side * _height) / 2.0;
 }
 

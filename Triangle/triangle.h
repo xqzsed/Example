@@ -4,12 +4,11 @@
 class Triangle {
 	double _side, _height;
 public:
-	Triangle();
 	Triangle(double side, double height);
-	double Area();
+	double findArea();
 
-	double gSide() const;
-	double gHeight() const;
+	double gSide() const noexcept;
+	double gHeight() const noexcept;
 
 	void sSide(double side);
 	void sHeight(double height);
